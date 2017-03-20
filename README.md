@@ -1,4 +1,4 @@
-# Read me please
+# READ ME READ ME 
 
 Raspberry Pi sound sensor project.
 
@@ -16,5 +16,5 @@ This project turns a RPi into a sound sensor.
 
  - USB sound card must be set as default deve.
  - If you are using Raspbian Jessie, al-utils must be rolled back to an early versioion.
-  - Instructions are available at https://portal.vamk.fi/mod/resource/view.php?id=265871
+ - Instructions are available at https://portal.vamk.fi/mod/resource/view.php?id=265871
  - Encoding of environment must be UTF-8.
