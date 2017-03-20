@@ -15,6 +15,6 @@ This project turns a RPi into a sound sensor.
 1.2 Software configuration
 
  - USB sound card must be set as default deve.
- - If you are using Raspbian Jessie, al-utils must be rolled back to an early versioion.
+ - If you are using Raspbian Jessie, alsa-utils must be rolled back to an early version.
  - Instructions are available at https://portal.vamk.fi/mod/resource/view.php?id=265871
  - Encoding of environment must be UTF-8.
