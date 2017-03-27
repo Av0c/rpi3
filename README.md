@@ -1,4 +1,4 @@
-# READ ME READ ME 
+# READ ME FIRST
 
 Raspberry Pi sound sensor project.
 
