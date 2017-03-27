@@ -28,10 +28,10 @@ void clearScreen(void)
 void displayBar(double rms, int col)
 {
 	int i;
-	for(i=0;i<rms/100;i++)
+	for(i=70;i>=70-rms/100 && i>=2;i--)
 	{
 		//if(i<2) break;
-		gotoXY(i+2, col);
+		gotoXY(i, col);//start appear from the second row and go down
 #ifndef UNICODE
 		printf("*");
 #else
