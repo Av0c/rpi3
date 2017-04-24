@@ -1,6 +1,5 @@
 /* This header file contains wave header information as a struct
-  It also contains necessary constant 
-* protoypes used in this project*/
+  It also contains necessary constant protoypes used in this project */
 
 typedef struct {
 	char ChunkID[4];
@@ -27,4 +26,3 @@ void printID(char *);
 void testTone(int freq, double duration);
 void fillID(const char *s, char d[]);
 void displayWAVdata(short int[]);
-
