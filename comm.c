@@ -4,25 +4,30 @@
 #include <string.h>
 
 void send_data_curl(double Leq[]) {
-	char postdata[200]="data=", temp[30];
+	char postdata[200]="", temp[200];
 	CURL *curl;
  	CURLcode res;
 	int i;
+	
 	for (i=0; i<8; i++) {
-		sprintf(temp, (i==7)?"%.2f":"%.2f;", Leq[i]);
+		if (i != 7) {
+			sprintf(temp, "data%i=%.2f&", i, Leq[i]);
+		} else {
+			sprintf(temp, "data%i=%.2f", i, Leq[i]);
+		}
 		strcat(postdata, temp);
 	}
 
    	curl_global_init(CURL_GLOBAL_ALL);
-    curl = curl_easy_init();
-    if (curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, URL);
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postdata);
-        res = curl_easy_perform(curl);
-        if (res != CURLE_OK) {
-            fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
-        }
-        curl_easy_cleanup(curl);
-    }
-    curl_global_cleanup();
+    	curl = curl_easy_init();
+	if (curl) {
+		curl_easy_setopt(curl, CURLOPT_URL, URL);
+		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postdata);
+		res = curl_easy_perform(curl);
+		if (res != CURLE_OK) {
+			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
+		}
+		curl_easy_cleanup(curl);
+	}
+	curl_global_cleanup();
 }
