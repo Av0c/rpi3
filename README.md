@@ -1,5 +1,6 @@
 # READ ME FIRST
 # https://github.com/Av0c/rpi3
+# Demo of Web-based sound stream: http://www.cc.puv.fi/~e1601127/php/soundProject/soundDisplay.html
 
 Raspberry Pi sound sensor project.
 
