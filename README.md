@@ -1,4 +1,5 @@
 # READ ME FIRST
+# https://github.com/Av0c/rpi3
 
 Raspberry Pi sound sensor project.
 
